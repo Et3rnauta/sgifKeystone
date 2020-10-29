@@ -1,57 +1,132 @@
-<div class="container">
-  <h1>
-    Consultar Alumno
-  </h1>
-  {{!-- <h1>
-    {{data.alumno.nombre}}
-  </h1>
-  <h1>
-    {{data.alumno.apellido}}
-  </h1> --}}
-  <div class="container">
-    <div
-      class="container"
-      style="line-height: 55px;
-    height: 55px;
-    background: #7f75e1;
-    text-align: center;"
-    >
-      <h3>
-        {{data.alumno.nombre}}
-        {{data.alumno.apellido}}
-        #
-        {{data.alumno.legajo}}
-      </h3>
+<head>
+  <meta charset="UTF-8">
+  <title>Side Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header_logo">
+      <img src="https://calidad.elegircolegio.com/images/made/images/uploads/logos/fatima-roca_298_298_imagespattern_ec_img_300.png_80_80_65_bor1_cccccc_s.png" alt="logo">
     </div>
-    <div class="container">
-      <ul>
-        <li>
-          <a href="#info">
-            Información Basica
-          </a>
-          {{> info-basica}}
-        </li>
-        <li>
-          <a href="#news">
-            Asistencia
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            Calificación
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            Mesas de Examen
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            Familia
-          </a>
-        </li>
-      </ul>
+    <div class="perfil_container">
+      <div class="company-header-avatar" style="background-image: url(https://assets.stickpng.com/images/5845e770fb0b0755fa99d7f4.png" ) />
     </div>
   </div>
+  </div>
+
+  <div class="wrapper">
+    
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li>Alumnos
+          <ul>
+            <li><a href="#">Consultar Información</a></li>
+            <li><a href="#">Inscribir Alumno</a></li>
+            <li><a href="#">Modificar Datos Alumno</a></li>
+            <li><a href="#">Reinscribir Alumno</a></li>
+          </ul>
+
+        </li>
+        <li>Curso
+          <ul>
+            <li><a href="#">Consultar Información</a></li>
+            <li><a href="#">Crear Curso</a></li>
+          </ul>
+        </li>
+        <li>Mesas de Examen
+          <ul>
+            <li><a href="#">Inscribir Alumno en Mesa de Examen</a></li>
+            <li><a href="#">Agregar Datos Mesa de Examen</a></li>
+            <li><a href="#">Cerrar Mesa de Examen</a></li>
+
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+    <div class="menu_informacion">
+       <div class="perfilAlumno"> {{data.alumno.nombre}} {{data.alumno.apellido}} {{data.alumno.legajo}}</div> 
+        <ul>
+          <li><a href="#info">Información Basica</a></li>
+          <li><a href="#news">Asistencia</a></li>
+          <li><a href="#contact">Calificación</a></li>
+          <li><a href="#contact">Mesas de Examen</a></li>
+          <li><a href="#contact">Familia</a></li>
+          <li><a href="#contact">Sanciones</a></li>
+        </ul>
+      <div class="panel">
+        <div class="panel-body bio-graph-info">
+          <h1>Datos Basicos</h1>
+          <div class="row">
+            <div class="bio-row-first">
+              <p><span>DNI </span>:{{data.alumno.dni}} </p>
+            </div>
+            <div class="bio-row-first">
+              <p><span>Genero </span>:{{data.alumno.genero}} </p>
+            </div>
+            <div class="bio-row-first">
+              <p><span>Fecha Nacimiento </span>:{{data.alumno.fechaNacimiento}} </p>
+            </div>
+            <div class="bio-row-first">
+              <p><span>Lugar Nacimiento:</span>: </p>
+            </div>
+            <div class="bio-row-second">
+              <p><span>Fecha de Ingreso </span>:{{data.alumno.fechaIngreso}} </p>
+            </div>
+            <div class="bio-row-second">
+              <p><span>Estado Inscripción </span>:{{data.alumno.estadoInscripcion}} </p>
+            </div>
+            <div class="bio-row-second">
+              <p><span>Escuela Anterior </span>:{{data.alumno.nombreEscuelaAnt}} </p>
+            </div>
+             <div class="bio-row-4">
+              <p><span>Año Correspondiente </span>:{{data.alumno.anioCorrespondiente}} </p>
+            </div>
+            <div class="bio-row-last">
+              <p><span>Fecha de Egreso </span>: </p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Bautismo </span> </p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Checkbox </span>: </p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Fecha </span>: </p>
+            </div>
+
+            <div class="bio-row-diocesis">
+              <p><span>Comunion </span></p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Checkbox </span>: </p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Fecha </span>: </p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Confirmación </span> </p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Checkbox </span>: </p>
+            </div>
+            <div class="bio-row-diocesis">
+              <p><span>Fecha </span>: </p>
+            </div>
+           
+            
+            
+            
+          </div>
+          <h2>Observaciones</h2>
+        </div>
+      </div>
+     
 </div>
+    
+    </div>
+  
+</body>

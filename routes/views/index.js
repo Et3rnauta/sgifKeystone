@@ -6,12 +6,15 @@ exports = module.exports = function (req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
-	var req = unirest("GET", "https://ajith-holy-bible.p.rapidapi.com/GetBooks");
+	let libro = "Luke";
+	let capitulo = "1";
+	let nVersiculo = "5";
+
+	var req = unirest("GET", "https://ajith-holy-bible.p.rapidapi.com/GetVerseOfaChapter");
 	req.query({
-		"Book": "Luke",
-		"chapter": "1",
-		"VerseFrom": "5",
-		"VerseTo": "5"
+		"Book": libro,
+		"chapter": capitulo,
+		"Verse": nVersiculo
 	});
 	req.headers({
 		"x-rapidapi-host": "ajith-holy-bible.p.rapidapi.com",
@@ -19,13 +22,16 @@ exports = module.exports = function (req, res) {
 		"useQueryString": true
 	});
 
-	let pasaje = "";
+	let versiculo = "";
 
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
 	locals.data = {
-		pasaje: "",
+		libro,
+		capitulo,
+		nVersiculo,
+		versiculo: "",
 	}
 
 	view.on('init', function (next) {
@@ -33,11 +39,11 @@ exports = module.exports = function (req, res) {
 		req.end(function (res) {
 			if (res.error) throw new Error(res.error);
 
-			pasaje = res.body.Output;
+			versiculo = res.body.Output;
 			// console.log(pasaje);
 
-			locals.data.pasaje = pasaje;
-			console.log(locals.data.pasaje);
+			locals.data.versiculo = versiculo;
+			console.log(locals.data.versiculo);
 
 			next();
 		})

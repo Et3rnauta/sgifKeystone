@@ -9,9 +9,10 @@
   <div class="header">
     <div class="header_logo">
       <img src="https://calidad.elegircolegio.com/images/made/images/uploads/logos/fatima-roca_298_298_imagespattern_ec_img_300.png_80_80_65_bor1_cccccc_s.png" alt="logo">
+      <h3>Instituto Nuestra Señora de Fátima</h3>
     </div>
     <div class="perfil_container">
-      <div class="company-header-avatar" style="background-image: url(https://assets.stickpng.com/images/5845e770fb0b0755fa99d7f4.png" ) />
+      <div class="company-header-avatar" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVe0cFaZ9e5Hm9X-tdWRLSvoZqg2bjemBABA&usqp=CAU" ) />
     </div>
   </div>
   </div>
@@ -88,8 +89,9 @@
             <div class="bio-row-last">
               <p><span>Fecha de Egreso </span>: </p>
             </div>
+            {{#each data.alumno.sacramentos}}
             <div class="bio-row-diocesis">
-              <p><span>Bautismo </span> </p>
+              <p><span>{{this}} </span> </p>
             </div>
             <div class="bio-row-diocesis">
               <p><span>Checkbox </span>: </p>
@@ -97,25 +99,9 @@
             <div class="bio-row-diocesis">
               <p><span>Fecha </span>: </p>
             </div>
+            {{/each}}
 
-            <div class="bio-row-diocesis">
-              <p><span>Comunion </span></p>
-            </div>
-            <div class="bio-row-diocesis">
-              <p><span>Checkbox </span>: </p>
-            </div>
-            <div class="bio-row-diocesis">
-              <p><span>Fecha </span>: </p>
-            </div>
-            <div class="bio-row-diocesis">
-              <p><span>Confirmación </span> </p>
-            </div>
-            <div class="bio-row-diocesis">
-              <p><span>Checkbox </span>: </p>
-            </div>
-            <div class="bio-row-diocesis">
-              <p><span>Fecha </span>: </p>
-            </div>
+            
            
             
             

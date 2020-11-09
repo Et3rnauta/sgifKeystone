@@ -15,7 +15,7 @@ exports = module.exports = function (req, res) {
 
     view.on('init', function (next) {
         let q = keystone.list('Alumno').model.findOne({
-            dni: "32323232"
+            dni: "*ingrese dni de alumno*"
         });
         q.exec(function (err, result) {
             locals.data.alumno = result;

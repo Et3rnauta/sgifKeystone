@@ -43,7 +43,6 @@ exports = module.exports = function (req, res) {
 			// console.log(pasaje);
 
 			locals.data.versiculo = versiculo;
-			console.log(locals.data.versiculo);
 
 			next();
 		})
